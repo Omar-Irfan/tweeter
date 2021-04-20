@@ -1,0 +1,37 @@
+nav {
+  display: flex;
+  height: 120px;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5em;
+  width: 100%;
+  position: fixed;
+}
+.prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+span{
+  font-family: 'Bungee', cursive;
+}
+
+.logo {
+  font-size: 35px;
+}
+
+.tweetPrompt {
+  font-family:'Source Sans Pro', sans-serif;
+}
+
+.write {
+  font-family:'Source Sans Pro', sans-serif;
+  font-weight: bold ;
+}
+
+.fas {
+  color: red
+}
