@@ -1,0 +1,38 @@
+
+button {
+  font-family: 'Bungee', cursive;
+  font-size: 15px;
+  background-color: #4056A1;
+  color: #fff;
+  border: none;
+  height: 25px;
+}
+
+.counter {
+  font-family: 'Bungee', cursive;
+  color:rgba(65, 60, 60, 0.836);
+  font-size: smaller;
+}
+
+.button-counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+textarea {
+  height:50px ;
+  width: 700px;
+  resize: none;
+  background-color: transparent;
+  outline: none;
+  outline-style: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid rgba(65, 60, 60, 0.836);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+}
