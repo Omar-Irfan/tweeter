@@ -45,12 +45,31 @@ const loadTweets = function() {
 
 
 $(document).ready(function() {
+  
   loadTweets()
   
-  $(document).submit(function(event) {
+  $(".tweet-function").submit(function(event) {
+
     event.preventDefault()
-  const submitData = $('#tweet-text').serialize()
-  $.post("/tweets", submitData)
+    const valData = $('.textarea').val()
+  
+    if (valData.length > 140) {
+    alert("Tweet is too long")
+    return
+    } 
+    
+    if (valData === "") {
+    alert("Tweet is empty")
+    return
+    
+    }
+
+    const submitData = $('#tweet-text').serialize()
+    console.log(submitData)
+    $.post("/tweets", submitData)
+    $('.textarea').val('')
+    loadTweets()
+  
   })
 
 
