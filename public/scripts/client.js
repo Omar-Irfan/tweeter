@@ -61,8 +61,19 @@ const renderTweets = function(tweets) {
   }
 };
 
+const loadTweets = function() {
+  
+}
 
 
 $(document).ready(function() {
   renderTweets(tweetData);
+
+  $(document).submit(function(event) {
+    event.preventDefault()
+  const submitData = $('#tweet-text').serialize()
+  $.post("/tweets", submitData)
+  })
+
+
 });
