@@ -56,6 +56,27 @@ main {
   padding: 0 1%
 }
 
+.user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1% 
+}
+
+.avatar {
+  height: 40px;
+  width: 40px;
+}
+
+.username {
+  margin-left: 10%;
+}
+
+.handle {
+  margin: 1%; 
+  color: lightsteelblue
+}
+
 .date-footer {
   font-size: 15px;
   display: flex;
