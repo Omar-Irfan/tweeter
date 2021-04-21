@@ -14,11 +14,11 @@ const createTweetElement = function(tweetObj) {
     <div class = "name-header">  
       <div class = "user">
         <img class = "avatar" src ="${avatar}"></img>
-        <div class = "username">${name}</div>
+        <div class = "username">${escape(name)}</div>
       </div>
-      <div class = "handle">${handle}</div>
+      <div class = "handle">${escape(handle)}</div>
     </div> 
-    <div class ="tweet">${content}</div>
+    <div class ="tweet">${escape(content)}</div>
     <footer class= "date-footer"> 
       <div class = "date">${timeAgo}</div>
       <div class = "icons">
@@ -37,8 +37,16 @@ const renderTweets = function(tweets) {
   }
 };
 
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
+
 const loadTweets = function() {
   $.get("/tweets", function(tweets) {
+    $('.all-tweets').empty()
     renderTweets(tweets)
   })
 }
