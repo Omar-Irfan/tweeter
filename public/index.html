@@ -70,36 +70,7 @@
           </div>
         </form>
       </section>
-      <article class="tweet-container">
-        <div class = "name-header">
-          <div class = "user"action="/tweets" method="GET">name</div>
-          <div class = "handle">@name</div>
-        </div> 
-        <div class ="tweet">hifhsufoaihfiashf</div>
-        <footer class= "date-footer"> 
-          <div class = "date"><div class="timeago" datetime="2016-06-30 09:20:00"></div></div>
-          <div class = "icons">
-            <i class="fas fa-flag"></i>
-            <i class="fas fa-retweet"></i>
-            <i class="fas fa-heart"></i>
-          </div>
-        </footer> 
-      </article>
-      <article class="tweet-container">
-        <div class = "name-header">
-          <div class = "user"action="/tweets" method="GET">name</div>
-          <div class = "handle">@name</div>
-        </div> 
-        <div class ="tweet">hifhsufoaihfiashf</div>
-        <footer class= "date-footer"> 
-          <div class = "date"><div class="timeago" datetime="2016-06-30 09:20:00"></div></div>
-          <div class = "icons">
-            <i class="fas fa-flag"></i>
-            <i class="fas fa-retweet"></i>
-            <i class="fas fa-heart"></i>
-          </div>
-        </footer> 
-      </article>
+      <div class = "all-tweets">
       <article class="tweet-container">
         <div class = "name-header">  
           <div class = "user">
@@ -118,11 +89,12 @@
           </div>
         </footer> 
       </article>
+    </div>
     </main>
   </body>
   <script>
-    $(document).ready(function() {
-      $('.date').text(timeago.format(new Date())) 
-    })
+    // $(document).ready(function() {
+    //   $('.date').text(timeago.format(new Date())) 
+    // })
   </script>
 </html>
