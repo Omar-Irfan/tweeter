@@ -7,10 +7,10 @@ header {
   padding-top: 120px;
   background-color: #6b3700;
   background-image: url("https://www.transparenttextures.com/patterns/grey-jean.png");
-  z-index: -1
-
+  z-index: -1;
 }
 
 .name {
   color: #ffff;
+  font-family:'Source Sans Pro', sans-serif;
 }
