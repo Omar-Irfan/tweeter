@@ -50,7 +50,30 @@ const loadTweets = function() {
     renderTweets(tweets)
   })
 }
+const slideUpAllError = function() {
+  $(".error-messages").slideUp()
+  $(".chara-error").slideUp()
+  $(".null-error").slideUp()
+}
 
+const slideDownLengthError = function() {
+  $(".error-messages").slideDown()
+  $(".chara-error").slideDown()
+}
+
+const slideDownEmptyError = function() {
+  $(".error-messages").slideDown()
+  $(".null-error").slideDown()
+}
+
+const submitTweets = function() {
+  const submitData = $('#tweet-text').serialize()
+    $.post("/tweets", submitData,  function (event) {
+    $('.textarea').val('')
+    $('.counter')[0].innerHTML = 140
+    loadTweets()
+    })
+}
 
 $(document).ready(function() {
   
@@ -59,31 +82,22 @@ $(document).ready(function() {
   $(".tweet-function").submit(function(event) {
     
     event.preventDefault()
-    $(".error-messages").slideUp()
-    $(".chara-error").slideUp()
-    $(".null-error").slideUp()
+    slideUpAllError()
 
     const valData = $('.textarea').val()
   
     if (valData.length > 140) {
-      $(".error-messages").slideDown()
-      $(".chara-error").slideDown()
+      slideDownLengthError()
       return
 
     } 
     
     if (valData === "") {
-      $(".error-messages").slideDown()
-      $(".null-error").slideDown()
+      slideDownEmptyError()
       return
-    
     }
 
-    const submitData = $('#tweet-text').serialize()
-    $.post("/tweets", submitData,  function (event) {
-    $('.textarea').val('')
-    loadTweets()
-    });
+    submitTweets()
   })
 
 

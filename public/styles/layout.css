@@ -25,7 +25,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 5%;
+  padding: 0 1%;
   background-color: #f4f1ec;
   color: black;
 
@@ -67,6 +67,7 @@ main {
 
 .username {
   margin-left: 10%;
+  white-space: nowrap
 }
 
 .handle {
@@ -133,4 +134,42 @@ main {
 .tweet-function {
   margin-top: 20px;
   margin-bottom: 10px;
+}
+
+@media (max-width: 1023px) {
+  main {
+    font-size: 32px;
+  }
+  .tweet-container {
+    width: 900px;
+  }
+  .tweet {
+    width: 870px;
+  }
+  .textarea {
+    width: 900px
+  }
+  .error-messages {
+    width: 900px
+  }
+}
+
+@media (min-width: 1600px) {
+  main {
+    font-size: 32px;
+  }
+  .tweet-container {
+    width: 900px;
+  }
+  .tweet {
+    width: 870px;
+  }
+  .textarea {
+    width: 900px
+  }
+  .error-messages {
+    width: 900px
+  }
+}
+
 }
