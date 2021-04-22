@@ -61,7 +61,10 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <div class  = "error-messages" style="display:none">
+          <div class = "chara-error" style="display:none" > ⚠️ WARNING: This tweet exceeds the character limit </div>
+          <div class = "null-error" style="display:none"> ⚠️ WARNING: This tweet is empty </div>
+        </div>
         <form class="tweet-function" action="/tweets" method="POST">
           <textarea class = "textarea" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class = "button-counter">
@@ -73,7 +76,6 @@
       <div class = "all-tweets"></div>
         </footer> 
       </article>
-    </div>
     </main>
   </body>
 </html>

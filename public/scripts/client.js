@@ -33,7 +33,7 @@ const createTweetElement = function(tweetObj) {
 
 const renderTweets = function(tweets) {
   for (let tweet of tweets) {
-    $('.all-tweets').append(createTweetElement(tweet));
+    $('.all-tweets').prepend(createTweetElement(tweet));
   }
 };
 
@@ -57,27 +57,31 @@ $(document).ready(function() {
   loadTweets()
   
   $(".tweet-function").submit(function(event) {
-
+    
     event.preventDefault()
+    $(".error-messages").slideUp()
+    $(".chara-error").slideUp()
+    $(".null-error").slideUp()
+
     const valData = $('.textarea').val()
   
     if (valData.length > 140) {
-    alert("Tweet is too long")
-    return
+      $(".error-messages").slideDown()
+      $(".chara-error").slideDown()
+
     } 
     
     if (valData === "") {
-    alert("Tweet is empty")
-    return
+      $(".error-messages").slideDown()
+      $(".null-error").slideDown()
     
     }
 
     const submitData = $('#tweet-text').serialize()
-    console.log(submitData)
-    $.post("/tweets", submitData)
+    $.post("/tweets", submitData,  function (event) {
     $('.textarea').val('')
     loadTweets()
-  
+    });
   })
 
 
