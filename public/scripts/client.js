@@ -68,12 +68,14 @@ $(document).ready(function() {
     if (valData.length > 140) {
       $(".error-messages").slideDown()
       $(".chara-error").slideDown()
+      return
 
     } 
     
     if (valData === "") {
       $(".error-messages").slideDown()
       $(".null-error").slideDown()
+      return
     
     }
 

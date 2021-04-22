@@ -3,11 +3,8 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-html {
+ *{
   box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
 }
 
 /*
@@ -39,7 +36,6 @@ main {
   justify-content: space-between;
   font-family: 'Source Sans Pro', sans-serif;
   margin: 2% 0;
-  height:150px ;
   width: 700px;
   border: solid rgba(65, 60, 60, 0.836);
   background-color: #f4f1ec;
@@ -53,14 +49,15 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 1%
+  padding: 0 1%;
 }
 
 .user {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 1% 
+  margin: 1%; 
+  margin-bottom: 2%;
 }
 
 .avatar {
@@ -83,14 +80,15 @@ main {
   flex-direction: row;
   justify-content: space-between;
   padding: 0 3%;
+  margin-top: 2%;
   margin-bottom: 1%;
 }
 
 .tweet {
   display: flex;
+  word-break: break-all;
   flex-direction: row;
   justify-content: flex-start;
-  height:50px ;
   width: 670px;
   margin-left: 1.7%;
   outline: none;
@@ -136,8 +134,3 @@ main {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-
-/* .all-tweets{
-  display: flex;
-  justify-content: flex-end;
-} */
