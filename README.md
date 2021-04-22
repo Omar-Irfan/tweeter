@@ -10,9 +10,14 @@ Tweeter is a simple, single-page AJAX based Twitter clone that uses jQuery, HTML
 4. Responsive display to cater to multiple device sizes.
 5. Sleek and modern user interface.
 
+
 ["Error Message for long tweets"](https://github.com/Omar-Irfan/tweeter/blob/master/docs/DesktopError.png?raw=true)
 
+
+
 ["Error Message for empty tweets"](https://github.com/Omar-Irfan/tweeter/blob/master/docs/DesktopError2.png?raw=true)
+
+
 
 ["View for tablet and smartphones"](https://github.com/Omar-Irfan/tweeter/blob/master/docs/TabletView.png?raw=true)
 
