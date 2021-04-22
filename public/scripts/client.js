@@ -37,7 +37,7 @@ const renderTweets = function(tweets) {
   }
 };
 
-const escape = function (str) {
+const escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -46,59 +46,59 @@ const escape = function (str) {
 
 const loadTweets = function() {
   $.get("/tweets", function(tweets) {
-    $('.all-tweets').empty()
-    renderTweets(tweets)
-  })
-}
+    $('.all-tweets').empty();
+    renderTweets(tweets);
+  });
+};
 const slideUpAllError = function() {
-  $(".error-messages").slideUp()
-  $(".chara-error").slideUp()
-  $(".null-error").slideUp()
-}
+  $(".error-messages").slideUp();
+  $(".chara-error").slideUp();
+  $(".null-error").slideUp();
+};
 
 const slideDownLengthError = function() {
-  $(".error-messages").slideDown()
-  $(".chara-error").slideDown()
-}
+  $(".error-messages").slideDown();
+  $(".chara-error").slideDown();
+};
 
 const slideDownEmptyError = function() {
-  $(".error-messages").slideDown()
-  $(".null-error").slideDown()
-}
+  $(".error-messages").slideDown();
+  $(".null-error").slideDown();
+};
 
 const submitTweets = function() {
-  const submitData = $('#tweet-text').serialize()
-    $.post("/tweets", submitData,  function (event) {
-    $('.textarea').val('')
-    $('.counter')[0].innerHTML = 140
-    loadTweets()
-    })
-}
+  const submitData = $('#tweet-text').serialize();
+  $.post("/tweets", submitData,  function(event) {
+    $('.textarea').val('');
+    $('.counter')[0].innerHTML = 140;
+    loadTweets();
+  });
+};
 
 $(document).ready(function() {
   
-  loadTweets()
+  loadTweets();
   
   $(".tweet-function").submit(function(event) {
     
-    event.preventDefault()
-    slideUpAllError()
+    event.preventDefault();
+    slideUpAllError();
 
-    const valData = $('.textarea').val()
+    const valData = $('.textarea').val();
   
     if (valData.length > 140) {
-      slideDownLengthError()
-      return
+      slideDownLengthError();
+      return;
 
-    } 
+    }
     
     if (valData === "") {
-      slideDownEmptyError()
-      return
+      slideDownEmptyError();
+      return;
     }
 
-    submitTweets()
-  })
+    submitTweets();
+  });
 
 
 });
