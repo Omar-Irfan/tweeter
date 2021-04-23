@@ -3,7 +3,7 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
- *{
+* {
   box-sizing: border-box;
 }
 
@@ -11,16 +11,16 @@
  * Global layout stuff
  */
 
-body {
+body { /* sets default settings for main body of layout */
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
-main {
+main { /* sets defaults for tweet form, container and individual tweets */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,9 +28,9 @@ main {
   padding: 0 1%;
   background-color: #f4f1ec;
   color: black;
-
 }
-.tweet-container {
+
+.tweet-container { /* display settings for what individual tweets should look like */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -41,41 +41,41 @@ main {
   background-color: #f4f1ec;
 }
 
-.tweet-container:hover {
+.tweet-container:hover { /* gives box shadow when you hover over indivudal tweets */
   box-shadow: 5px 5px lightslategray;
 }
 
-.name-header {
+.name-header { /* arranges username, handle and avatar */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 0 1%;
 }
 
-.user {
+.user { /* arranges usernnames and handle */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 1%; 
+  margin: 1%;
   margin-bottom: 2%;
 }
 
-.avatar {
+.avatar { /* adjusts avatar size */
   height: 40px;
   width: 40px;
 }
 
-.username {
+.username { /* makes sure usernames appear on one line even if two words */
   margin-left: 10%;
-  white-space: nowrap
+  white-space: nowrap;
 }
 
-.handle {
-  margin: 1%; 
-  color: lightsteelblue
+.handle { /* default settings for handle */
+  margin: 1%;
+  color: lightsteelblue;
 }
 
-.date-footer {
+.date-footer { /* arranges timeago and icons */
   font-size: 15px;
   display: flex;
   flex-direction: row;
@@ -85,7 +85,7 @@ main {
   margin-bottom: 1%;
 }
 
-.tweet {
+.tweet { /* creats display for actual content of tweet including solid black line */
   display: flex;
   word-break: break-all;
   flex-direction: row;
@@ -100,23 +100,23 @@ main {
   border-bottom: solid rgba(65, 60, 60, 0.836);
 }
 
-.icons {
-  color: #4056A1;
+.icons { /* sets default colour for icons */
+  color: #4056a1;
 }
-.fa-flag:hover {
-  color: #CD7F32;
-}
-.fa-retweet:hover {
-  color: #CD7F32;
-}
-.fa-heart:hover {
-  color: #CD7F32;
-}
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 
-.error-messages {
+.fa-flag:hover {
+  color: #cd7f32;       /* hover functionality for icons */
+}
+
+.fa-retweet:hover {
+  color: #cd7f32;
+}
+
+.fa-heart:hover {
+  color: #cd7f32;
+}
+
+.error-messages { /* creates red box and font defaults for error messages */
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: bold;
   color: red;
@@ -128,7 +128,6 @@ main {
   align-items: center;
   margin-top: 20px;
   margin-bottom: 10px;
-
 }
 
 .tweet-function {
@@ -136,40 +135,46 @@ main {
   margin-bottom: 10px;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1023px) { /* creates larger tweet display for smaller screens */
   main {
     font-size: 32px;
   }
+
   .tweet-container {
     width: 900px;
   }
+
   .tweet {
     width: 870px;
   }
+
   .textarea {
-    width: 900px
+    width: 900px;
   }
+
   .error-messages {
-    width: 900px
+    width: 900px;
   }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1600px) { /* creates larger tweet display for vert large screens */
   main {
     font-size: 32px;
   }
+
   .tweet-container {
     width: 900px;
   }
+
   .tweet {
     width: 870px;
   }
-  .textarea {
-    width: 900px
-  }
-  .error-messages {
-    width: 900px
-  }
-}
 
+  .textarea {
+    width: 900px;
+  }
+
+  .error-messages {
+    width: 900px;
+  }
 }

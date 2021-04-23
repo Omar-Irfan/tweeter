@@ -1,4 +1,4 @@
-header {
+header {  /* creates header display for default case */
   height: 520px;
   width: 100%;
   display: flex;
@@ -10,25 +10,25 @@ header {
   z-index: -1;
 }
 
-.name {
+.name { /* changes user name on header to white and changes font */
   color: #ffff;
-  font-family:'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) { /* changes settings for laptops and bigger devices */
   body {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;  /* changes screen layout to be rows instead of columns, header is now on the left of the main content not on top */
     justify-content: space-around;
   }
-  header {
+
+  header { /* changes header dimensions for laptops and larger devices */
     height: 380px;
-    width: 350px; 
+    width: 350px;
     margin-top: 200px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 20px;
   }
-
 }

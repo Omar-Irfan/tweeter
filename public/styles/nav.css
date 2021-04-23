@@ -1,21 +1,22 @@
-nav {
+nav { /* creates fixed navagation bar on top of page */
   display: flex;
   height: 120px;
-  background-color: #4056A1;
-  color: #FFFFFF;
+  background-color: #4056a1;
+  color: #fff;
   justify-content: space-between;
   align-items: center;
   padding: 0 1.5em;
   width: 100%;
   position: fixed;
 }
-.prompt {
+
+.prompt { /* positions "write new tweet and double down arrows */
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
-span{
+
+span {
   font-family: 'Bungee', cursive;
 }
 
@@ -24,30 +25,31 @@ span{
 }
 
 .tweetPrompt {
-  font-family:'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .write {
-  font-family:'Source Sans Pro', sans-serif;
-  font-weight: bold ;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
 }
 
-.fa-angle-double-down{
-  color: red
+.fa-angle-double-down {
+  color: red;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) { /* changes  margin value in desktop case */
   .container {
     margin-top: 170px;
-  } 
-  
+  }
 }
-@media (max-width: 1023px) {
-nav {
-  background-color: #277e8b;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-}
-.fa-angle-double-down{
-  color: white
-}
+
+@media (max-width: 1023px) { /* cosmetic changes for tablet/small devices */
+  nav {
+    background-color: #277e8b;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  }
+
+  .fa-angle-double-down {
+    color: white;
+  }
 }

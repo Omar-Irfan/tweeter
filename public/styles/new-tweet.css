@@ -1,28 +1,28 @@
 
-button {
+button { /* cosmetic settings for "TWEET" button */
   font-family: 'Bungee', cursive;
   font-size: 15px;
-  background-color: #4056A1;
+  background-color: #4056a1;
   color: #fff;
   border: none;
   height: 25px;
 }
 
-.counter {
+.counter { /* sets font and colour for counter */
   font-family: 'Bungee', cursive;
-  color:rgba(65, 60, 60, 0.836);
+  color: rgba(65, 60, 60, 0.836);
   font-size: smaller;
 }
 
-.button-counter {
+.button-counter { /* alligns button and counter */
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
-textarea {
-  height:50px ;
+textarea { /* cosmetic settings for "what are you humming about?" textbox for form submission */
+  height: 50px;
   width: 700px;
   resize: none;
   background-color: transparent;
